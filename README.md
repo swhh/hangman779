@@ -5,5 +5,6 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 ## File Structure
 - hangman
-- milestone2.py
+- milestone_2.py
 - README.md
+- milestone_3.py
