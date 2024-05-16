@@ -1,6 +1,6 @@
 from milestone_2 import word
 
-def ask_for_input():
+def ask_for_input_letter():
     while True:
         guess = input('Please provide a single letter')
         if len(guess) == 1 and guess.isalpha():
@@ -16,4 +16,4 @@ def check_guess(guess):
         print(f"Sorry, {guess} is not in the word. Try again.")
 
 if __name__ == '__main__':
-    ask_for_input()
+    ask_for_input_letter()
