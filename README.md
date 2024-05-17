@@ -9,3 +9,4 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 - README.md
 - milestone_3.py
 - milestone_4.py
+- milestone_5.py
