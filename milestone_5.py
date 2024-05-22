@@ -11,7 +11,7 @@ class Hangman:
         self.num_letters = len(set(self.word))
         self.list_of_guesses = list()
 
-    def check_guess(self, guess):
+    def _check_guess(self, guess):
         '''Check if guess in word; if in word, decrement num_letters; else, decrement num_lives'''
         guess = guess.lower()
         if guess in self.word:
@@ -26,18 +26,20 @@ class Hangman:
             print(f"You have {self.num_lives} lives left.")
         
     def ask_for_input(self):
+        '''Asks user for a letter via standard input and checks if in self.word'''
         while True:
             guess = input('Guess a letter in the word: ')
-            if not len(guess) == 1 or not guess.isalpha():
+            if len(guess) != 1 or not guess.isalpha():
                 print('Invalid letter. Please, enter a single alphabetical character.')
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
-                self.check_guess(guess)
+                self._check_guess(guess)
                 self.list_of_guesses.append(guess)
                 break
 
 def play_game(word_list):
+    """Plays game using the Hangman class"""
     num_lives = 5
     game = Hangman(word_list=word_list, num_lives=num_lives)
     while True:
